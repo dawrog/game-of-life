@@ -32,7 +32,7 @@ class Grid extends React.Component {
 				boxClass = this.props.gridFull[i][j] ? 'box on' : 'box off';
 				rowsArr.push(
 					<Box
-						boxClass={boxClass}key={boxId}
+						boxClass={boxClass}
 						key={boxId}
 						boxId={boxId}
 						row={i}
@@ -52,13 +52,9 @@ class Grid extends React.Component {
 }
 
 class Buttons extends React.Component {
-
 	handleSelect = (evt) => {
 		this.props.gridSize(evt);
 	}
-}
-
-class Buttons extends React.Component {
 
 	render() {
 		return (
@@ -147,7 +143,8 @@ class Main extends React.Component {
 		this.playButton();
 	}
 
-	fast = () => {
+	fast
+	 = () => {
 		this.speed = 100;
 		this.playButton();
 	}
